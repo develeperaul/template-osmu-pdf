@@ -389,6 +389,24 @@
         margin: 12px auto;
         background-color: #fff;
         padding: 25px;
+        position: relative;
+        overflow: hidden;
+      }
+      .page > * {
+        position: relative;
+      }
+      .page::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url(./images/pattern.svg);
+        background-size: 300%;
+        background-repeat: no-repeat;
+        background-position: bottom;
+
+        left: 0;
+        top: 0;
       }
       .link {
         position: relative;
@@ -402,12 +420,65 @@
         padding-right: 20px;
         font-weight: 700;
       }
+      .bgpixels {
+        background-image: url(./images/pixels.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
       .bggradorange {
         background: linear-gradient(0deg, rgb(105, 58, 10), rgb(227, 116, 10));
       }
 
       .bggradpurple {
         background: linear-gradient(0deg, rgb(30, 19, 59), rgb(68, 30, 153));
+      }
+
+      .bggradgreen {
+        background: linear-gradient(0deg, rgb(33, 60, 21), rgb(75, 157, 41));
+      }
+
+      .bggradblue {
+        background: linear-gradient(0deg, rgb(26, 88, 122), rgb(52, 177, 250));
+      }
+
+      .bggradred {
+        background: linear-gradient(0deg, rgb(78, 4, 2), rgb(200, 0, 0));
+      }
+      .bgyellow {
+        background-color: rgb(253, 255, 27);
+      }
+
+      .bgredlight {
+        background-color: rgb(223, 104, 103);
+      }
+      .bgyellowdark {
+        background-color: rgb(240, 170, 96);
+      }
+
+      .bggreen {
+        background-color: rgb(133, 211, 99);
+      }
+      .bgpurple {
+        background-color: rgb(109, 45, 126);
+      }
+      .bgpink {
+        background-color: rgb(255, 94, 94);
+      }
+      .bgblue {
+        background-color: rgb(49, 128, 190);
+      }
+      ul li {
+        position: relative;
+        list-style: none;
+      }
+
+      ul li::before {
+        content: "-";
+        position: absolute;
+        left: -20px;
+      }
+      .word-break {
+        word-break: break-word;
       }
     </style>
     <!-- components -->
@@ -573,6 +644,83 @@
           </td>
         </tr>
       </table>
+    </div>
+
+    <!-- 2 -->
+    <div class="page">
+      <table
+        cellpadding="0"
+        cellspacing="0"
+        width="100%"
+        style="margin-bottom: 18px">
+        <tr>
+          <th align="left" width="60%">
+            <div class="">
+              <div class="blue bold fns13 fcblue">АНАЛИТИЧЕСКИЙ ОТЧЕТ</div>
+              <div class="blue bold fns13 fcgreen">
+                ПО СОЦСЕТЯМ И СИСТЕМАМ ОБРАТНОЙ СВЯЗИ
+              </div>
+            </div>
+          </th>
+          <th align="left" valign="middle" width="40%">
+            <div class="border border border-black border-solid fns10 py6 px6">
+              <div class="mb2">
+                <span class="bold"> Глава ОМСУ: </span>
+                <span class="medium"> Ирназаров Денис Ильдарович </span>
+              </div>
+              <div>
+                <span class="bold"> Сотрудник от ОМСУ: </span>
+                <span class="medium"> Широбокова Юлия Павловна </span>
+              </div>
+              <div>
+                <span class="bold"> Куратор от ЦУР: </span>
+                <span class="medium"> Валиева Наталия Николаевна </span>
+              </div>
+            </div>
+          </th>
+        </tr>
+        <tr>
+          <th align="left" width="60%">
+            <table>
+              <tr>
+                <td>
+                  <img
+                    src="./images/cur-logo.svg"
+                    alt=""
+                    width="120"
+                    style="padding-right: 15px" />
+                </td>
+                <td>
+                  <table>
+                    <tr>
+                      <td>
+                        <img src="./images/gerb.jpg" alt="" width="32" />
+                      </td>
+                      <td style="padding-left: 10px" valign="middle">
+                        <div class="blue bold fns13 fcblue">Город Агидель</div>
+                        <div class="blue bold fns13 fcgreen">
+                          Республики Башкортостан
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </th>
+          <th align="left" valign="middle" width="40%">
+            <div
+              class="fns16 fcwhite bgbluedark white-nowrap px24 py4 text-center medium float-l">
+              Отчет №106
+            </div>
+            <div
+              class="fns16 fcwhite bgbluedark white-nowrap px24 py4 text-center medium float-r">
+              08.02-14.02.2024
+            </div>
+          </th>
+        </tr>
+      </table>
+      <img src="./images/week.png" alt="" class="w-full" />
     </div>
     <!-- 3 -->
     <div class="page">
@@ -1277,13 +1425,83 @@
             <div class="text-center fns12 bold mb18">
               ДИНАМИКА ПОДПИСЧИКОВ В СОЦИАЛЬНЫХ СЕТЯХ
             </div>
-            <img src="./images/gr1.png" alt="" width="580" height="270" />
+            <table style="height: 270px; margin: 0 auto">
+              <tbody>
+                <tr>
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div class="bggreen" style="width: 100%; height: 50%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div class="bggreen" style="width: 100%; height: 50%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div class="bggreen" style="width: 100%; height: 80%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div class="bggreen" style="width: 100%; height: 80%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </td>
           <td valign="top">
             <div class="text-center fns12 bold mb18">
               ДИНАМИКА ПУБЛИКАЦИЙ В СОЦИАЛЬНЫХ СЕТЯХ
             </div>
-            <img src="./images/gr1.png" alt="" width="580" height="270" />
+            <table style="height: 270px; margin: 0 auto">
+              <tbody>
+                <tr>
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div class="bgblue" style="width: 100%; height: 50%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div class="bgblue" style="width: 100%; height: 50%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div class="bgblue" style="width: 100%; height: 80%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div class="bgblue" style="width: 100%; height: 80%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </td>
         </tr>
         <tr>
@@ -1291,13 +1509,91 @@
             <div class="text-center fns12 bold mb18">
               ДИНАМИКА ПРОСМОТРОВ В СОЦИАЛЬНЫХ СЕТЯХ
             </div>
-            <img src="./images/gr1.png" alt="" width="580" height="270" />
+            <table style="height: 270px; margin: 0 auto">
+              <tbody>
+                <tr>
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div
+                      class="bgpurple"
+                      style="width: 100%; height: 50%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div
+                      class="bgpurple"
+                      style="width: 100%; height: 50%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div
+                      class="bgpurple"
+                      style="width: 100%; height: 80%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div
+                      class="bgpurple"
+                      style="width: 100%; height: 80%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </td>
           <td valign="top">
             <div class="text-center fns12 bold mb18">
               ДИНАМИКА КОММЕНТАРИЕВ В СОЦИАЛЬНЫХ СЕТЯХ
             </div>
-            <img src="./images/gr1.png" alt="" width="580" height="270" />
+            <table style="height: 270px; margin: 0 auto">
+              <tbody>
+                <tr>
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div class="bgpink" style="width: 100%; height: 50%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div class="bgpink" style="width: 100%; height: 50%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div class="bgpink" style="width: 100%; height: 80%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div class="bgpink" style="width: 100%; height: 80%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </td>
         </tr>
       </table>
@@ -2194,13 +2490,83 @@
             <div class="text-center fns12 bold mb18">
               ДИНАМИКА ПОДПИСЧИКОВ В СОЦИАЛЬНЫХ СЕТЯХ
             </div>
-            <img src="./images/gr1.png" alt="" width="580" height="270" />
+            <table style="height: 270px; margin: 0 auto">
+              <tbody>
+                <tr>
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div class="bggreen" style="width: 100%; height: 50%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div class="bggreen" style="width: 100%; height: 50%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div class="bggreen" style="width: 100%; height: 80%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div class="bggreen" style="width: 100%; height: 80%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </td>
           <td valign="top">
             <div class="text-center fns12 bold mb18">
               ДИНАМИКА ПУБЛИКАЦИЙ В СОЦИАЛЬНЫХ СЕТЯХ
             </div>
-            <img src="./images/gr1.png" alt="" width="580" height="270" />
+            <table style="height: 270px; margin: 0 auto">
+              <tbody>
+                <tr>
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div class="bgblue" style="width: 100%; height: 50%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div class="bgblue" style="width: 100%; height: 50%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div class="bgblue" style="width: 100%; height: 80%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div class="bgblue" style="width: 100%; height: 80%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </td>
         </tr>
         <tr>
@@ -2208,13 +2574,91 @@
             <div class="text-center fns12 bold mb18">
               ДИНАМИКА ПРОСМОТРОВ В СОЦИАЛЬНЫХ СЕТЯХ
             </div>
-            <img src="./images/gr1.png" alt="" width="580" height="270" />
+            <table style="height: 270px; margin: 0 auto">
+              <tbody>
+                <tr>
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div
+                      class="bgpurple"
+                      style="width: 100%; height: 50%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div
+                      class="bgpurple"
+                      style="width: 100%; height: 50%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div
+                      class="bgpurple"
+                      style="width: 100%; height: 80%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div
+                      class="bgpurple"
+                      style="width: 100%; height: 80%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </td>
           <td valign="top">
             <div class="text-center fns12 bold mb18">
               ДИНАМИКА КОММЕНТАРИЕВ В СОЦИАЛЬНЫХ СЕТЯХ
             </div>
-            <img src="./images/gr1.png" alt="" width="580" height="270" />
+            <table style="height: 270px; margin: 0 auto">
+              <tbody>
+                <tr>
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div class="bgpink" style="width: 100%; height: 50%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div class="bgpink" style="width: 100%; height: 50%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div class="bgpink" style="width: 100%; height: 80%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">4</div>
+                    <div class="bgpink" style="width: 100%; height: 80%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </td>
         </tr>
       </table>
@@ -3307,6 +3751,670 @@
       </table> -->
     </div>
 
+    <!-- 14 -->
+
+    <div class="page">
+      <table
+        cellpadding="0"
+        cellspacing="0"
+        width="100%"
+        style="margin-bottom: 18px">
+        <tr>
+          <th align="left" width="60%">
+            <div class="">
+              <div class="blue bold fns13 fcblue">АНАЛИТИЧЕСКИЙ ОТЧЕТ</div>
+              <div class="blue bold fns13 fcgreen">
+                ПО СОЦСЕТЯМ И СИСТЕМАМ ОБРАТНОЙ СВЯЗИ
+              </div>
+            </div>
+          </th>
+          <th align="left" valign="middle" width="40%">
+            <div class="border border border-black border-solid fns10 py6 px6">
+              <div class="mb2">
+                <span class="bold"> Глава ОМСУ: </span>
+                <span class="medium"> Ирназаров Денис Ильдарович </span>
+              </div>
+              <div>
+                <span class="bold"> Сотрудник от ОМСУ: </span>
+                <span class="medium"> Широбокова Юлия Павловна </span>
+              </div>
+              <div>
+                <span class="bold"> Куратор от ЦУР: </span>
+                <span class="medium"> Валиева Наталия Николаевна </span>
+              </div>
+            </div>
+          </th>
+        </tr>
+        <tr>
+          <th align="left" width="60%">
+            <table>
+              <tr>
+                <td>
+                  <img
+                    src="./images/cur-logo.svg"
+                    alt=""
+                    width="120"
+                    style="padding-right: 15px" />
+                </td>
+                <td>
+                  <table>
+                    <tr>
+                      <td>
+                        <img src="./images/gerb.jpg" alt="" width="32" />
+                      </td>
+                      <td style="padding-left: 10px" valign="middle">
+                        <div class="blue bold fns13 fcblue">Город Агидель</div>
+                        <div class="blue bold fns13 fcgreen">
+                          Республики Башкортостан
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </th>
+          <th align="left" valign="middle" width="40%">
+            <div
+              class="fns16 fcwhite bgbluedark white-nowrap px24 py4 text-center medium float-l">
+              Отчет №106
+            </div>
+            <div
+              class="fns16 fcwhite bgbluedark white-nowrap px24 py4 text-center medium float-r">
+              08.02-14.02.2024
+            </div>
+          </th>
+        </tr>
+      </table>
+      <table width="100%">
+        <tr>
+          <td valign="center">
+            <div class="bold fns14">
+              ТЕМЫ ПО КОЛИЧЕСТВУ ОБРАЩЕНИЙ В СИСТЕМЕ <br />
+              ИНЦИДЕНТ-МЕНЕДЖМЕНТ И ПОС В СРАВНЕНИИ С ПРЕДЫДУЩЕЙ НЕДЕЛЕЙ
+            </div>
+          </td>
+          <td>
+            <div class="fns10 bold px4 py4" style="border: 1px solid black">
+              <div>Протоколы:</div>
+              <a href="#" class="fcblue underline block"
+                >Протокол №1 от 19.09.23</a
+              >
+              <a href="#" class="fcblue underline block"
+                >Протокол №1 от 19.09.23</a
+              >
+              <a href="#" class="fcblue underline block"
+                >Протокол №1 от 19.09.23</a
+              >
+              <a href="#" class="fcblue underline block"
+                >Протокол №1 от 19.09.23</a
+              >
+            </div>
+          </td>
+        </tr>
+      </table>
+      <table width="100%" class="mb16">
+        <tr>
+          <td width="20%">
+            <table style="height: 400px; margin: 10px auto" width="100%">
+              <tbody>
+                <tr>
+                  <td valign="bottom">
+                    <div class="text-center fcblue bold fns10 mb8">2</div>
+                    <div class="bgblue" style="width: 100%; height: 60%"></div>
+                  </td>
+                  <td valign="bottom">
+                    <div class="text-center fcgreen bold fns10 mb8">1</div>
+                    <div class="bggreen" style="width: 100%; height: 50%"></div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="text-center fns8 bold mt8">
+              Нарушение правил уборки от снегопада и наледи внутридворного
+              проезда, тротуара, площади
+            </div>
+          </td>
+
+          <td width="20%">
+            <table style="height: 400px; margin: 10px auto" width="100%">
+              <tbody>
+                <tr>
+                  <td valign="bottom">
+                    <div class="text-center fcblue bold fns10 mb8">2</div>
+                    <div class="bgblue" style="width: 100%; height: 60%"></div>
+                  </td>
+                  <td valign="bottom">
+                    <div class="text-center fcgreen bold fns10 mb8">1</div>
+                    <div class="bggreen" style="width: 100%; height: 50%"></div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="text-center fns8 bold mt8">
+              Благоустройство придомовых территорий
+            </div>
+          </td>
+
+          <td width="20%">
+            <table style="height: 400px; margin: 10px auto" width="100%">
+              <tbody>
+                <tr>
+                  <td valign="bottom">
+                    <div class="text-center fcblue bold fns10 mb8">2</div>
+                    <div class="bgblue" style="width: 100%; height: 60%"></div>
+                  </td>
+                  <td valign="bottom">
+                    <div class="text-center fcgreen bold fns10 mb8">1</div>
+                    <div class="bggreen" style="width: 100%; height: 50%"></div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="text-center fns8 bold mt8">
+              Порядок и сроки получения выплат
+            </div>
+          </td>
+
+          <td width="20%">
+            <table style="height: 400px; margin: 10px auto" width="100%">
+              <tbody>
+                <tr>
+                  <td valign="bottom">
+                    <div class="text-center fcblue bold fns10 mb8">2</div>
+                    <div class="bgblue" style="width: 100%; height: 60%"></div>
+                  </td>
+                  <td valign="bottom">
+                    <div class="text-center fcgreen bold fns10 mb8">1</div>
+                    <div class="bggreen" style="width: 100%; height: 50%"></div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="text-center fns8 bold mt8">
+              Уборка снега и наледи с крыш
+            </div>
+          </td>
+
+          <td width="20%">
+            <table style="height: 400px; margin: 10px auto" width="100%">
+              <tbody>
+                <tr>
+                  <td valign="bottom">
+                    <div class="text-center fcblue bold fns10 mb8">2</div>
+                    <div class="bgblue" style="width: 100%; height: 60%"></div>
+                  </td>
+                  <td valign="bottom">
+                    <div class="text-center fcgreen bold fns10 mb8">1</div>
+                    <div class="bggreen" style="width: 100%; height: 50%"></div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="text-center fns8 bold mt8">
+              Дикие животные в населённых пунктах
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div
+        class="fns13 py12 px8"
+        style="
+          border: 2px solid rgb(211, 211, 211);
+          width: 80%;
+          margin: 0 auto;
+        ">
+        <b> Примечание: </b> Ежедневный снегопад и установившаяся плюсовая
+        температура способствуют созданию “снежной каши” на дорогах, что и стало
+        основным источником инцидентов на этой неделе.
+      </div>
+    </div>
+
+    <!-- 15 -->
+    <div class="page">
+      <table
+        cellpadding="0"
+        cellspacing="0"
+        width="100%"
+        style="margin-bottom: 18px">
+        <tr>
+          <th align="left" width="60%">
+            <div class="">
+              <div class="blue bold fns13 fcblue">АНАЛИТИЧЕСКИЙ ОТЧЕТ</div>
+              <div class="blue bold fns13 fcgreen">
+                ПО СОЦСЕТЯМ И СИСТЕМАМ ОБРАТНОЙ СВЯЗИ
+              </div>
+            </div>
+          </th>
+          <th align="left" valign="middle" width="40%">
+            <div class="border border border-black border-solid fns10 py6 px6">
+              <div class="mb2">
+                <span class="bold"> Глава ОМСУ: </span>
+                <span class="medium"> Ирназаров Денис Ильдарович </span>
+              </div>
+              <div>
+                <span class="bold"> Сотрудник от ОМСУ: </span>
+                <span class="medium"> Широбокова Юлия Павловна </span>
+              </div>
+              <div>
+                <span class="bold"> Куратор от ЦУР: </span>
+                <span class="medium"> Валиева Наталия Николаевна </span>
+              </div>
+            </div>
+          </th>
+        </tr>
+        <tr>
+          <th align="left" width="60%">
+            <table>
+              <tr>
+                <td>
+                  <img
+                    src="./images/cur-logo.svg"
+                    alt=""
+                    width="120"
+                    style="padding-right: 15px" />
+                </td>
+                <td>
+                  <table>
+                    <tr>
+                      <td>
+                        <img src="./images/gerb.jpg" alt="" width="32" />
+                      </td>
+                      <td style="padding-left: 10px" valign="middle">
+                        <div class="blue bold fns13 fcblue">Город Агидель</div>
+                        <div class="blue bold fns13 fcgreen">
+                          Республики Башкортостан
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </th>
+          <th align="left" valign="middle" width="40%">
+            <div
+              class="fns16 fcwhite bgbluedark white-nowrap px24 py4 text-center medium float-l">
+              Отчет №106
+            </div>
+            <div
+              class="fns16 fcwhite bgbluedark white-nowrap px24 py4 text-center medium float-r">
+              08.02-14.02.2024
+            </div>
+          </th>
+        </tr>
+      </table>
+      <div class="title mb18">
+        АНАЛИЗ ВРЕМЕНИ ПЕРВИЧНОГО ОТВЕТА В СИСТЕМЕ ИНЦИДЕНТ-МЕНЕДЖМЕНТ
+      </div>
+      <table
+        border="1"
+        cellspacing="0"
+        class="mb18"
+        style="border-color: rgb(211, 211, 211)">
+        <tr>
+          <th></th>
+          <th class="py10 px10">18.01-24.01.2024</th>
+          <th class="py10 px10">18.01-24.01.2024</th>
+          <th class="py10 px10">18.01-24.01.2024</th>
+          <th class="py10 px10">18.01-24.01.2024</th>
+        </tr>
+
+        <tr>
+          <td class="py10 px10 bold">Среднее время</td>
+          <td class="py10 px10 bold bggreen">1:20:40</td>
+          <td class="py10 px10 bold bggreen">1:20:40</td>
+          <td class="py10 px10 bold bggreen">1:20:40</td>
+          <td class="py10 px10 bold bggreen">1:20:40</td>
+        </tr>
+      </table>
+
+      <table width="100%" class="mb16">
+        <tr>
+          <td align="center">
+            <div>
+              <div
+                class="bgblue inline-block mb4"
+                style="width: 15px; height: 3px"></div>
+              <div class="bold inline">Среднее время</div>
+            </div>
+            <table style="height: 370px; margin: 0 auto">
+              <tbody>
+                <tr>
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">1:20:40</div>
+                    <div class="bgblue" style="width: 100%; height: 50%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">1:10:40</div>
+                    <div class="bgblue" style="width: 100%; height: 50%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">1:40:40</div>
+                    <div class="bgblue" style="width: 100%; height: 80%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">1:00:40</div>
+                    <div class="bgblue" style="width: 100%; height: 80%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+
+          <td align="center">
+            <div>
+              <div
+                class="bgpurple inline-block mb4"
+                style="width: 15px; height: 3px"></div>
+              <div class="bold inline">Количество инцидентов</div>
+            </div>
+            <table style="height: 370px; margin: 0 auto">
+              <tbody>
+                <tr>
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">1</div>
+                    <div
+                      class="bgpurple"
+                      style="width: 100%; height: 50%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">12</div>
+                    <div
+                      class="bgpurple"
+                      style="width: 100%; height: 50%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">13</div>
+                    <div
+                      class="bgpurple"
+                      style="width: 100%; height: 80%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+                  <td valign="bottom" style="padding: 0 15px">
+                    <div class="text-center bold fns10 mb8">14</div>
+                    <div
+                      class="bgpurple"
+                      style="width: 100%; height: 80%"></div>
+                    <div class="text-center fns8 bold mt8">
+                      11.01-17.01.2024
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </table>
+
+      <table width="100%">
+        <tr>
+          <td width="20%">
+            <div class="fns12 bold mb8">Срок первичного ответа</div>
+
+            <div>
+              <table cellpadding="0" cellspacing="0">
+                <tr>
+                  <td class="bgredlight" style="width: 20px; height: 20px"></td>
+                  <td>Более 9 часов</td>
+                </tr>
+
+                <tr>
+                  <td
+                    class="bgyellowdark"
+                    style="width: 20px; height: 20px"></td>
+                  <td>От 3 до 9 часов</td>
+                </tr>
+
+                <tr>
+                  <td class="bggreen" style="width: 20px; height: 20px"></td>
+                  <td>Менее 3 часов</td>
+                </tr>
+              </table>
+            </div>
+          </td>
+          <td width="80%" valign="top">
+            <div
+              class="fns10 px8 py8"
+              style="
+                background-color: white;
+                border: 2px solid rgb(211, 211, 211);
+                min-height: 50px;
+              ">
+              <b>Примечание:</b>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- 16 -->
+
+    <div class="page">
+      <table
+        cellpadding="0"
+        cellspacing="0"
+        width="100%"
+        style="margin-bottom: 18px">
+        <tr>
+          <th align="left" width="60%">
+            <div class="">
+              <div class="blue bold fns13 fcblue">АНАЛИТИЧЕСКИЙ ОТЧЕТ</div>
+              <div class="blue bold fns13 fcgreen">
+                ПО СОЦСЕТЯМ И СИСТЕМАМ ОБРАТНОЙ СВЯЗИ
+              </div>
+            </div>
+          </th>
+          <th align="left" valign="middle" width="40%">
+            <div class="border border border-black border-solid fns10 py6 px6">
+              <div class="mb2">
+                <span class="bold"> Глава ОМСУ: </span>
+                <span class="medium"> Ирназаров Денис Ильдарович </span>
+              </div>
+              <div>
+                <span class="bold"> Сотрудник от ОМСУ: </span>
+                <span class="medium"> Широбокова Юлия Павловна </span>
+              </div>
+              <div>
+                <span class="bold"> Куратор от ЦУР: </span>
+                <span class="medium"> Валиева Наталия Николаевна </span>
+              </div>
+            </div>
+          </th>
+        </tr>
+        <tr>
+          <th align="left" width="60%">
+            <table>
+              <tr>
+                <td>
+                  <img
+                    src="./images/cur-logo.svg"
+                    alt=""
+                    width="120"
+                    style="padding-right: 15px" />
+                </td>
+                <td>
+                  <table>
+                    <tr>
+                      <td>
+                        <img src="./images/gerb.jpg" alt="" width="32" />
+                      </td>
+                      <td style="padding-left: 10px" valign="middle">
+                        <div class="blue bold fns13 fcblue">Город Агидель</div>
+                        <div class="blue bold fns13 fcgreen">
+                          Республики Башкортостан
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </th>
+          <th align="left" valign="middle" width="40%">
+            <div
+              class="fns16 fcwhite bgbluedark white-nowrap px24 py4 text-center medium float-l">
+              Отчет №106
+            </div>
+            <div
+              class="fns16 fcwhite bgbluedark white-nowrap px24 py4 text-center medium float-r">
+              08.02-14.02.2024
+            </div>
+          </th>
+        </tr>
+      </table>
+      <div
+        class="bggradblue fcwhite py12 bold"
+        style="margin: 0 -25px 18px; padding-left: 25px; padding-right: 25px">
+        ПУБЛИКАЦИИ ПО БРИФИНГАМ
+      </div>
+      <table width="100%" height="520">
+        <tr>
+          <td width="35%">
+            <div class="px4 py4 mb8" style="border: 1px solid black">
+              <img src="./images/23.jpg" alt="" class="w-full" />
+            </div>
+            <div class="fns13 bold">
+              Ссылка:
+              <a
+                href="https://vk.com/agidel_adm?w=wall-93576172_18261 "
+                class="underline fcblue">
+                https://vk.com/agidel_adm?w=wall-93576172_18261
+              </a>
+            </div>
+          </td>
+          <td widt="65%" valign="top" style="padding-left: 80px">
+            <div class="bold fns15 mb18">Краткое описание брифинга</div>
+            <div style="line-height: 1.5">
+              <div>
+                10 января в Администрации города Агидели состоялся брифинг на
+                тему "Военная служба по контракту".
+              </div>
+              <div>
+                В брифинге принял участие военный комиссар городов Нефтекамск,
+                Агидель и Краснокамского района - Егоров Аркадий Витальевич.
+              </div>
+              <div>На брифинге озвучили ответы на вопросы:</div>
+              <ul>
+                <li>Кто может служить по контракту?</li>
+                <li>Как поступить на службу по контракту?</li>
+                <li>Какие выплаты предусмотрены для участников СВО?</li>
+                <li>
+                  Какие меры поддержки оказываются участникам СВО и их семьям?
+                </li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div
+        class="bggradblue py4 fcgray"
+        style="margin: 18px -25px 0; padding-left: 25px; padding-right: 25px">
+        <table width="100%">
+          <tr>
+            <td>
+              <table>
+                <tr>
+                  <td>
+                    <table
+                      class="fns10 bold"
+                      style="
+                        background-color: rgb(238, 240, 244);
+                        border-radius: 20px;
+                        padding: 7px;
+                      ">
+                      <tr>
+                        <td valign="center">
+                          <img
+                            src="./images/heart.png"
+                            alt=""
+                            width="14"
+                            height="14" />
+                        </td>
+                        <td valign="center">
+                          <span> 233 </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+
+                  <td>
+                    <table
+                      class="fns10 bold"
+                      style="
+                        background-color: rgb(238, 240, 244);
+                        border-radius: 20px;
+                        padding: 7px;
+                      ">
+                      <tr>
+                        <td valign="center">
+                          <img
+                            src="./images/message.png"
+                            alt=""
+                            width="14"
+                            height="14" />
+                        </td>
+                        <td valign="center">
+                          <span> 233 </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td>
+                    <table
+                      class="fns10 bold"
+                      style="
+                        background-color: rgb(238, 240, 244);
+                        border-radius: 20px;
+                        padding: 7px;
+                      ">
+                      <tr>
+                        <td valign="center">
+                          <img
+                            src="./images/glas.png"
+                            alt=""
+                            width="18"
+                            height="14" />
+                        </td>
+                        <td valign="center">
+                          <span> 233 </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
     <!-- 17 -->
 
     <div class="page">
@@ -3696,6 +4804,943 @@
             </td>
 
             <td width="30%" align="center">
+              <table>
+                <tr>
+                  <td>
+                    <table
+                      class="fns10 bold"
+                      style="
+                        background-color: rgb(238, 240, 244);
+                        border-radius: 20px;
+                        padding: 7px;
+                      ">
+                      <tr>
+                        <td valign="center">
+                          <img
+                            src="./images/heart.png"
+                            alt=""
+                            width="14"
+                            height="14" />
+                        </td>
+                        <td valign="center">
+                          <span> 233 </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+
+                  <td>
+                    <table
+                      class="fns10 bold"
+                      style="
+                        background-color: rgb(238, 240, 244);
+                        border-radius: 20px;
+                        padding: 7px;
+                      ">
+                      <tr>
+                        <td valign="center">
+                          <img
+                            src="./images/message.png"
+                            alt=""
+                            width="14"
+                            height="14" />
+                        </td>
+                        <td valign="center">
+                          <span> 233 </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td>
+                    <table
+                      class="fns10 bold"
+                      style="
+                        background-color: rgb(238, 240, 244);
+                        border-radius: 20px;
+                        padding: 7px;
+                      ">
+                      <tr>
+                        <td valign="center">
+                          <img
+                            src="./images/glas.png"
+                            alt=""
+                            width="18"
+                            height="14" />
+                        </td>
+                        <td valign="center">
+                          <span> 233 </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- 18 -->
+
+    <div class="page">
+      <table
+        cellpadding="0"
+        cellspacing="0"
+        width="100%"
+        style="margin-bottom: 18px">
+        <tr>
+          <th align="left" width="60%">
+            <div class="">
+              <div class="blue bold fns13 fcblue">АНАЛИТИЧЕСКИЙ ОТЧЕТ</div>
+              <div class="blue bold fns13 fcgreen">
+                ПО СОЦСЕТЯМ И СИСТЕМАМ ОБРАТНОЙ СВЯЗИ
+              </div>
+            </div>
+          </th>
+          <th align="left" valign="middle" width="40%">
+            <div class="border border border-black border-solid fns10 py6 px6">
+              <div class="mb2">
+                <span class="bold"> Глава ОМСУ: </span>
+                <span class="medium"> Ирназаров Денис Ильдарович </span>
+              </div>
+              <div>
+                <span class="bold"> Сотрудник от ОМСУ: </span>
+                <span class="medium"> Широбокова Юлия Павловна </span>
+              </div>
+              <div>
+                <span class="bold"> Куратор от ЦУР: </span>
+                <span class="medium"> Валиева Наталия Николаевна </span>
+              </div>
+            </div>
+          </th>
+        </tr>
+        <tr>
+          <th align="left" width="60%">
+            <table>
+              <tr>
+                <td>
+                  <img
+                    src="./images/cur-logo.svg"
+                    alt=""
+                    width="120"
+                    style="padding-right: 15px" />
+                </td>
+                <td>
+                  <table>
+                    <tr>
+                      <td>
+                        <img src="./images/gerb.jpg" alt="" width="32" />
+                      </td>
+                      <td style="padding-left: 10px" valign="middle">
+                        <div class="blue bold fns13 fcblue">Город Агидель</div>
+                        <div class="blue bold fns13 fcgreen">
+                          Республики Башкортостан
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </th>
+          <th align="left" valign="middle" width="40%">
+            <div
+              class="fns16 fcwhite bgbluedark white-nowrap px24 py4 text-center medium float-l">
+              Отчет №106
+            </div>
+            <div
+              class="fns16 fcwhite bgbluedark white-nowrap px24 py4 text-center medium float-r">
+              08.02-14.02.2024
+            </div>
+          </th>
+        </tr>
+      </table>
+      <div
+        class="bgpixels fcwhite py12 bold"
+        style="margin: 0 -25px 18px; padding-left: 25px; padding-right: 25px">
+        <table width="100%" class="bold">
+          <tr>
+            <td width="30%">ПУБЛИКАЦИИ ПО БРИФИНГАМ</td>
+            <td width="30%" align="center" class="text-center">
+              <div>Форма по поставкам по СВО</div>
+              <div>
+                <a href="#" class="fcblue underline"> https://vk.cc/coisdo </a>
+              </div>
+            </td>
+            <td width="30%" align="center" class="text-center">
+              <div class="fns13">
+                <i> ВСЕГО ПОСТОВ ПО СВО: 4 </i>
+              </div>
+              <div class="fns13">
+                <i> ВСЕГО ПРОСМОТРОВ: 2967 </i>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table width="100%">
+        <tr>
+          <td width="30%">
+            <table>
+              <tr>
+                <td align="center">
+                  <table>
+                    <tr>
+                      <td>
+                        <img
+                          src="./images/vk2.png"
+                          alt=""
+                          width="30"
+                          height="30" />
+                      </td>
+                      <td>Вконтакте</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <table border="1" cellspacing="0">
+                    <tr>
+                      <td valign="middle" align="center">
+                        <img src="./images/23.jpg" alt="" class="w-full" />
+                      </td>
+                    </tr>
+                  </table>
+                  <a
+                    href="https://vk.com/wall-201146046_114780"
+                    class="fns11 underline blue block mt10">
+                    <img
+                      src="./images/link.png"
+                      alt=""
+                      width="14"
+                      height="14" />
+                    https://vk.com/wall-201146046_114780
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="fns13 mt12">
+                    <b> О чем пост: </b>
+                    (Краткое описание публикации с указанием даты события)
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </td>
+
+          <td width="30%">
+            <table>
+              <tr>
+                <td align="center">
+                  <table>
+                    <tr>
+                      <td>
+                        <img
+                          src="./images/odn2.png"
+                          alt=""
+                          width="30"
+                          height="30" />
+                      </td>
+                      <td>Одноклассники</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <table border="1" cellspacing="0">
+                    <tr>
+                      <td valign="middle" align="center">
+                        <img src="./images/23.jpg" alt="" class="w-full" />
+                      </td>
+                    </tr>
+                  </table>
+
+                  <a
+                    href="https://vk.com/wall-201146046_114780"
+                    class="fns11 underline blue block mt10">
+                    <img
+                      src="./images/link.png"
+                      alt=""
+                      width="14"
+                      height="14" />
+                    https://vk.com/wall-201146046_114780
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="fns13 mt12">
+                    <b> О чем пост: </b>
+                    (Краткое описание публикации с указанием даты события)
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </td>
+
+          <td width="30%">
+            <table>
+              <tr>
+                <td align="center">
+                  <table>
+                    <tr>
+                      <td>
+                        <img
+                          src="./images/tg2.png"
+                          alt=""
+                          width="30"
+                          height="30" />
+                      </td>
+                      <td>Телеграм</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <table border="1" cellspacing="0">
+                    <tr>
+                      <td valign="middle" align="center">
+                        <img src="./images/23.jpg" alt="" class="w-full" />
+                      </td>
+                    </tr>
+                  </table>
+                  <a
+                    href="https://vk.com/wall-201146046_114780"
+                    class="fns11 underline blue block mt10">
+                    <img
+                      src="./images/link.png"
+                      alt=""
+                      width="14"
+                      height="14" />
+                    https://vk.com/wall-201146046_114780
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="fns13 mt12">
+                    <b> О чем пост: </b>
+                    (Краткое описание публикации с указанием даты события)
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+
+      <div
+        class="bgpixels py4 fcgray"
+        style="margin: 10px -25px 0; padding-left: 25px; padding-right: 25px">
+        <table width="100%">
+          <tr>
+            <td width="30%" align="center">
+              <table>
+                <tr>
+                  <td>
+                    <table
+                      class="fns10 bold"
+                      style="
+                        background-color: rgb(238, 240, 244);
+                        border-radius: 20px;
+                        padding: 7px;
+                      ">
+                      <tr>
+                        <td valign="center">
+                          <img
+                            src="./images/heart.png"
+                            alt=""
+                            width="14"
+                            height="14" />
+                        </td>
+                        <td valign="center">
+                          <span> 233 </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+
+                  <td>
+                    <table
+                      class="fns10 bold"
+                      style="
+                        background-color: rgb(238, 240, 244);
+                        border-radius: 20px;
+                        padding: 7px;
+                      ">
+                      <tr>
+                        <td valign="center">
+                          <img
+                            src="./images/message.png"
+                            alt=""
+                            width="14"
+                            height="14" />
+                        </td>
+                        <td valign="center">
+                          <span> 233 </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td>
+                    <table
+                      class="fns10 bold"
+                      style="
+                        background-color: rgb(238, 240, 244);
+                        border-radius: 20px;
+                        padding: 7px;
+                      ">
+                      <tr>
+                        <td valign="center">
+                          <img
+                            src="./images/glas.png"
+                            alt=""
+                            width="18"
+                            height="14" />
+                        </td>
+                        <td valign="center">
+                          <span> 233 </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+
+            <td width="30%" align="center">
+              <table>
+                <tr>
+                  <td>
+                    <table
+                      class="fns10 bold"
+                      style="
+                        background-color: rgb(238, 240, 244);
+                        border-radius: 20px;
+                        padding: 7px;
+                      ">
+                      <tr>
+                        <td valign="center">
+                          <img
+                            src="./images/heart.png"
+                            alt=""
+                            width="14"
+                            height="14" />
+                        </td>
+                        <td valign="center">
+                          <span> 233 </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+
+                  <td>
+                    <table
+                      class="fns10 bold"
+                      style="
+                        background-color: rgb(238, 240, 244);
+                        border-radius: 20px;
+                        padding: 7px;
+                      ">
+                      <tr>
+                        <td valign="center">
+                          <img
+                            src="./images/message.png"
+                            alt=""
+                            width="14"
+                            height="14" />
+                        </td>
+                        <td valign="center">
+                          <span> 233 </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td>
+                    <table
+                      class="fns10 bold"
+                      style="
+                        background-color: rgb(238, 240, 244);
+                        border-radius: 20px;
+                        padding: 7px;
+                      ">
+                      <tr>
+                        <td valign="center">
+                          <img
+                            src="./images/glas.png"
+                            alt=""
+                            width="18"
+                            height="14" />
+                        </td>
+                        <td valign="center">
+                          <span> 233 </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+
+            <td width="30%" align="center">
+              <table>
+                <tr>
+                  <td>
+                    <table
+                      class="fns10 bold"
+                      style="
+                        background-color: rgb(238, 240, 244);
+                        border-radius: 20px;
+                        padding: 7px;
+                      ">
+                      <tr>
+                        <td valign="center">
+                          <img
+                            src="./images/heart.png"
+                            alt=""
+                            width="14"
+                            height="14" />
+                        </td>
+                        <td valign="center">
+                          <span> 233 </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+
+                  <td>
+                    <table
+                      class="fns10 bold"
+                      style="
+                        background-color: rgb(238, 240, 244);
+                        border-radius: 20px;
+                        padding: 7px;
+                      ">
+                      <tr>
+                        <td valign="center">
+                          <img
+                            src="./images/message.png"
+                            alt=""
+                            width="14"
+                            height="14" />
+                        </td>
+                        <td valign="center">
+                          <span> 233 </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td>
+                    <table
+                      class="fns10 bold"
+                      style="
+                        background-color: rgb(238, 240, 244);
+                        border-radius: 20px;
+                        padding: 7px;
+                      ">
+                      <tr>
+                        <td valign="center">
+                          <img
+                            src="./images/glas.png"
+                            alt=""
+                            width="18"
+                            height="14" />
+                        </td>
+                        <td valign="center">
+                          <span> 233 </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- 19 -->
+
+    <div class="page">
+      <table
+        cellpadding="0"
+        cellspacing="0"
+        width="100%"
+        style="margin-bottom: 18px">
+        <tr>
+          <th align="left" width="60%">
+            <div class="">
+              <div class="blue bold fns13 fcblue">АНАЛИТИЧЕСКИЙ ОТЧЕТ</div>
+              <div class="blue bold fns13 fcgreen">
+                ПО СОЦСЕТЯМ И СИСТЕМАМ ОБРАТНОЙ СВЯЗИ
+              </div>
+            </div>
+          </th>
+          <th align="left" valign="middle" width="40%">
+            <div class="border border border-black border-solid fns10 py6 px6">
+              <div class="mb2">
+                <span class="bold"> Глава ОМСУ: </span>
+                <span class="medium"> Ирназаров Денис Ильдарович </span>
+              </div>
+              <div>
+                <span class="bold"> Сотрудник от ОМСУ: </span>
+                <span class="medium"> Широбокова Юлия Павловна </span>
+              </div>
+              <div>
+                <span class="bold"> Куратор от ЦУР: </span>
+                <span class="medium"> Валиева Наталия Николаевна </span>
+              </div>
+            </div>
+          </th>
+        </tr>
+        <tr>
+          <th align="left" width="60%">
+            <table>
+              <tr>
+                <td>
+                  <img
+                    src="./images/cur-logo.svg"
+                    alt=""
+                    width="120"
+                    style="padding-right: 15px" />
+                </td>
+                <td>
+                  <table>
+                    <tr>
+                      <td>
+                        <img src="./images/gerb.jpg" alt="" width="32" />
+                      </td>
+                      <td style="padding-left: 10px" valign="middle">
+                        <div class="blue bold fns13 fcblue">Город Агидель</div>
+                        <div class="blue bold fns13 fcgreen">
+                          Республики Башкортостан
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </th>
+          <th align="left" valign="middle" width="40%">
+            <div
+              class="fns16 fcwhite bgbluedark white-nowrap px24 py4 text-center medium float-l">
+              Отчет №106
+            </div>
+            <div
+              class="fns16 fcwhite bgbluedark white-nowrap px24 py4 text-center medium float-r">
+              08.02-14.02.2024
+            </div>
+          </th>
+        </tr>
+      </table>
+      <div
+        class="bggradred fcwhite py12 bold"
+        style="margin: 0 -25px 18px; padding-left: 25px; padding-right: 25px">
+        СЛОЖНЫЕ ВОПРОСЫ, СИСТЕМНЫЕ ПРОБЛЕМЫ
+      </div>
+
+      <table
+        width="100%"
+        cellspacing="0"
+        cellpadding="0"
+        border="1"
+        style="border-color: rgb(211, 211, 211); border-top: none">
+        <tr>
+          <td width="20%" valign="top">
+            <div class="bggradred fcwhite bold fns10" style="padding: 12px 6px">
+              СООБЩЕНИЕ ЖИТЕЛЯ
+            </div>
+            <div class="fns10" style="padding: 6px">
+              <div>
+                <b>
+                  <i> Тема: Отсутствие воды </i>
+                </b>
+              </div>
+              <div class="my16">
+                <b>
+                  <i> Инц. №734776 </i>
+                </b>
+                <br />
+                <b>
+                  <i> от 12.12.2023 </i>
+                </b>
+              </div>
+
+              <div class="my16">
+                <div>
+                  <b> Ссылка на инцидент: </b>
+                </div>
+                <a href="#" class="fcblue underline word-break">
+                  https://im.gosuslugi.ru/#/incidents/stage/10?incident=21388588
+                </a>
+              </div>
+
+              <div class="my16">
+                <div>
+                  <b> Ссылка на комментарий жителя: </b>
+                </div>
+                <a href="#" class="fcblue underline word-break">
+                  https://im.gosuslugi.ru/#/incidents/stage/10?incident=21388588
+                </a>
+              </div>
+
+              <div class="my16">
+                <div>
+                  <b> С 9:00? С 7 утра уже не было воды </b>
+                </div>
+              </div>
+            </div>
+          </td>
+
+          <td width="20%" valign="top">
+            <div class="bggradred fcwhite bold fns10" style="padding: 12px 6px">
+              ОТВЕТ МУНИЦИПАЛИТЕТА
+            </div>
+            <div class="fns10" style="padding: 6px">
+              <b> Ответ от 12.12.2023: </b>здравствуйте!
+              <b>
+                Из-за значительного износа сетей водоснабжения бывают
+                непредвиденные аварии.
+              </b>
+              В этом году в рамках региональной программы Республики
+              Башкортостан «Модернизация коммунальной инфраструктуры» провели
+              работы по замене водопроводных сетей холодного водоснабжения.
+              <b>
+                На следующий год Администрация города планирует принять участие
+                в данной программе по замене водопроводных сетей холодного
+                водоснабжения всего города.
+              </b>
+              Воду привозят в течение дня ко всем домам по Комсомольскому
+              бульвару.
+              <b>
+                Аварийные работы планируется завершить до 09.00 13 декабря.
+              </b>
+              С уважением, Лилия Хафизова, официальный представитель
+              Администрации города Агидель.
+            </div>
+            <div>
+              <div class="bggradred fcwhite bold fns8" style="padding: 6px 6px">
+                Примечание от ОМСУ:
+              </div>
+            </div>
+          </td>
+
+          <td width="60%" valign="top">
+            <div class="bggradred fcwhite bold fns10" style="padding: 12px 6px">
+              АНАЛИЗ ВОПРОСА
+            </div>
+            <div class="fns10" style="padding: 6px">
+              <div>
+                <b>
+                  Наличие этой проблемы в прошлых отчетах (“Впервые”/ “Повторно”
+                  и номера отчетов, если уже была):
+                </b>
+                Повтор: 81, 82, 83
+              </div>
+              <div>
+                <b> Суть проблемы, системность: </b>
+                В связи с большим износом сетей водоснабжения происходят
+                непредвиденные аварии в сетях водоснабжения.
+              </div>
+
+              <div>
+                <b> Информ. справка по ситуации: </b>
+                Жители жалуются на частые отключения воды, которые возникают
+                из-за аварии на водопроводных сетях и на плохое качество воды.
+                За период ноябрь-декабрь 2023 года произошло три аварии. Общая
+                протяженность сетей 76,38 км.
+              </div>
+
+              <div>
+                <b> Причины возникновения ситуации: </b>
+                Износ сетей водоснабжения. Трубопроводы эксплуатируются более 40
+                лет.
+              </div>
+
+              <div>
+                <b> Что уже сделано для решения проблемы: </b>
+                В 2023 году в рамках региональной программы Республики
+                Башкортостан «Модернизация коммунальной инфраструктуры» провели
+                замену водопроводных сетей холодного водоснабжения. Из них
+                заменили 2,09 км.
+              </div>
+
+              <div>
+                <b> Какие действия планирует муниципалитет: </b>
+                В 2024 году Администрация города планирует принять участие в
+                региональной программы Республики Башкортостан «Модернизация
+                коммунальной инфраструктуры» по замене водопроводных сетей
+                холодного водоснабжения всего города для последующего участия в
+                федеральных программах по замене водопроводных сетей. Направлено
+                письмо МинЖКХ о возможности участия г. Агидель в программе. По
+                состоянию на 14 декабря, идет подготовка предпроектной
+                документации.
+              </div>
+
+              <div>
+                <b> В чем нужно содействие республики (если нужно): </b>
+                Оказать содействие включения города Агидель в региональную
+                программу Республики Башкортостан «Модернизация коммунальной
+                инфраструктуры».
+              </div>
+
+              <div>
+                <b> Что сделал муниципалитет для этого: </b>
+                Совместно с Правительством Республики Башкортостан разработали
+                план мероприятий (“дорожная карта”) по социально-экономическому
+                и инфраструктурному развитию городского округа г. Агидель,
+                утвержденный Постановлением Правительства Республики
+                Башкортостан № 1300-р от 28 сентября 2023 года. Согласно
+                Постановлению в 2024 году должны выделить 15 млн. рублей на
+                разработку проектно-сметной документации по реконструкции
+                водопроводных сетей в г. Агидель, для последующего участия в
+                федеральных программах по замене водопроводных сетей. 15 декабря
+                запросили информацию в МинЖКХ о выделении финансирования на
+                разработку проектно-сметной документации через систему
+                “Инцидент-менеджмент”
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div
+        class="bgyellow px10 py8 fns12 mt14"
+        style="width: 60%; min-height: 60px">
+        <b> Примечание от куратора ЦУР: Примечание </b>
+      </div>
+    </div>
+
+    <!-- 20 -->
+
+    <div class="page">
+      <table
+        cellpadding="0"
+        cellspacing="0"
+        width="100%"
+        style="margin-bottom: 18px">
+        <tr>
+          <th align="left" width="60%">
+            <div class="">
+              <div class="blue bold fns13 fcblue">АНАЛИТИЧЕСКИЙ ОТЧЕТ</div>
+              <div class="blue bold fns13 fcgreen">
+                ПО СОЦСЕТЯМ И СИСТЕМАМ ОБРАТНОЙ СВЯЗИ
+              </div>
+            </div>
+          </th>
+          <th align="left" valign="middle" width="40%">
+            <div class="border border border-black border-solid fns10 py6 px6">
+              <div class="mb2">
+                <span class="bold"> Глава ОМСУ: </span>
+                <span class="medium"> Ирназаров Денис Ильдарович </span>
+              </div>
+              <div>
+                <span class="bold"> Сотрудник от ОМСУ: </span>
+                <span class="medium"> Широбокова Юлия Павловна </span>
+              </div>
+              <div>
+                <span class="bold"> Куратор от ЦУР: </span>
+                <span class="medium"> Валиева Наталия Николаевна </span>
+              </div>
+            </div>
+          </th>
+        </tr>
+        <tr>
+          <th align="left" width="60%">
+            <table>
+              <tr>
+                <td>
+                  <img
+                    src="./images/cur-logo.svg"
+                    alt=""
+                    width="120"
+                    style="padding-right: 15px" />
+                </td>
+                <td>
+                  <table>
+                    <tr>
+                      <td>
+                        <img src="./images/gerb.jpg" alt="" width="32" />
+                      </td>
+                      <td style="padding-left: 10px" valign="middle">
+                        <div class="blue bold fns13 fcblue">Город Агидель</div>
+                        <div class="blue bold fns13 fcgreen">
+                          Республики Башкортостан
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </th>
+          <th align="left" valign="middle" width="40%">
+            <div
+              class="fns16 fcwhite bgbluedark white-nowrap px24 py4 text-center medium float-l">
+              Отчет №106
+            </div>
+            <div
+              class="fns16 fcwhite bgbluedark white-nowrap px24 py4 text-center medium float-r">
+              08.02-14.02.2024
+            </div>
+          </th>
+        </tr>
+      </table>
+      <div
+        class="bggradgreen fcwhite py12 bold"
+        style="margin: 0 -25px 18px; padding-left: 25px; padding-right: 25px">
+        УНИКАЛЬНЫЕ НАРАБОТКИ, РЕШЕННЫЕ ВОПРОСЫ И ПУБЛИКАЦИИ
+      </div>
+      <table width="100%" height="520">
+        <tr>
+          <td widt="65%" valign="top" style="padding-right: 80px">
+            <div class="fns13" style="line-height: 1.5">
+              В преддверии Нового года подвели итоги лучшего новогоднего
+              оформления придомовых территорий.Конкурс организовали
+              администрация совместно с управляющей компанией ООО УЖКХ.Решением
+              конкурсной комиссии гран - при и денежный приз в размере 30 000
+              рублей присудили двору по ул. Академика Курчатова д. 16. Этот двор
+              будет представлять город Агидель в республиканском конкурсе
+              «Лучший новогодний городок».
+              <ul>
+                <li>
+                  Первое место, жюри единогласно отдали двору по ул. Мира д. 22.
+                </li>
+                <li>
+                  Второе место дворы по ул. Ак. Курчатова д.1/11 и ул. Первых
+                  строителей д. 12.
+                </li>
+                <li>
+                  Третье место дворы по ул. Молодежная д. 2а и ул. Первых
+                  строителей д. 10.
+                </li>
+              </ul>
+              <b> Ссылка на пост: </b>
+              <a
+                href="https://vk.com/agidel_adm?w=wall-93576172_18172"
+                class="underline fcblue">
+                https://vk.com/agidel_adm?w=wall-93576172_18172
+              </a>
+            </div>
+          </td>
+          <td width="35%" class="px4 py4" style="border: 1px solid black">
+            <img src="./images/23.jpg" alt="" class="w-full" />
+          </td>
+        </tr>
+      </table>
+
+      <div
+        class="bggradgreen py4 fcgray"
+        style="margin: 18px -25px 0; padding-left: 25px; padding-right: 25px">
+        <table width="100%">
+          <tr>
+            <td>
               <table>
                 <tr>
                   <td>
